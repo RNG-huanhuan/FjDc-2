@@ -1,0 +1,34 @@
+.NavHeader {
+  .header_top{
+    background-color: #fff;
+  }
+  .header_bottom{
+    @height:40px;
+    height: @height;
+    border-top: 1px solid #09f;
+    background-color: #fff;
+    padding: 0 40px;
+    .pagetitle {
+      position: relative;
+      width: 80px;
+      line-height: @height;
+      font-size: 16px;
+      text-align: center;
+
+      //绘制小箭头
+      &::after{
+          position: absolute;
+          content: "";
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-top: 10px solid #fff;
+          border-bottom: 12px solid transparent;
+
+     //更改位置
+          left:50%;
+          transform: translate(-50%,90%);
+          bottom: 0;
+      }
+    }
+  }
+}
